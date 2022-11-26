@@ -1,0 +1,34 @@
+<section class="mt-5">
+  <div class="container">
+    <div class="card">
+      <div class="row align-items-center gy-3 p-5" *ngIf="(usuarioLogado$ | async) as usuarioLogado">
+        <div class="col-12 col-md-7">
+          <h1 class="card-title fw-semibold text-primary">Painel do Usuário</h1>
+
+          <h2 class="fw-semibold fs-4">{{ usuarioLogado.nome }}</h2>
+          <section id="info" class="fs-5">
+            <p class="mt-4">Bem-vindo, este é o <span class="text-primary fw-semibold">Gerenciador de Cinema</span>, com ele você pode
+              gerenciar seus filmes, salas e sessões.</p>
+            <p class="text-primary fw-semibold">O que você deseja gerenciar?</p>
+          </section>
+
+          <section id="buttons" class="d-grid d-md-flex gap-2">
+
+            <a class="btn btn-primary" routerLink="/sessoes"><i class="bi bi-bookmark-check-fill me-2"></i>Sessao</a>
+
+            <a class="btn btn-primary" routerLink="/filmes"><i class="bi bi-bookmark-check-fill me-2"></i>Filme</a>
+
+            <a class="btn btn-primary" routerLink="/salas"><i class="bi bi-bookmark-check-fill me-2"></i>Salas</a>
+
+          </section>
+
+        </div>
+
+        <div class="col-12 col-md-5">
+          <img src="/assets/dashboard-image.svg" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

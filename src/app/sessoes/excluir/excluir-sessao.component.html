@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row">
+    <!-- Conteúdo principal -->
+    <div class="col-12 col-md-10 col-lg-9 mx-auto my-5">
+      <!-- Titulo -->
+      <div class="text-md-start">
+
+        <div class="text-md-start">
+          <h1 class="fw-bold text-primary">
+            Excluir Sessão
+          </h1>
+          <hr />
+        </div>
+
+        <h2 class="fs-5">
+          Tem certeza que deseja excluir a sessão: Data <span class="fw-bolder fst-italic">"{{
+            sessaoFormVM.data| date: 'dd/MM/yyyy'}}", FILME:"{{
+            sessaoFormVM.filme.titulo}}", SALA:"{{
+            sessaoFormVM.sala.nome}}" </span>?
+        </h2>
+      </div>
+
+      <dl class="form-group mt-4 row">
+
+        <dt class="col-md-4">
+          <label class="control-label">Data:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ sessaoFormVM.data| date: 'dd/MM/yyyy' }}
+        </dd>
+
+        <dt class="col-md-4">
+          <label class="control-label">Horario Início:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ sessaoFormVM.horarioInicio }}
+        </dd>
+
+        <dt class="col-md-4">
+          <label class="control-label">Horario Fim:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ sessaoFormVM.horarioFim }}
+        </dd>
+
+
+        <dt class="col-md-4">
+          <label class="control-label">Valor Ingresso:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ sessaoFormVM.valorIngresso | currency : 'R$ ' }}
+        </dd>
+
+        <dt class="col-md-4">
+          <label class="control-label">Horario Inicio:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ sessaoFormVM.animacao === 0 ? '3D' : '2D' }}
+        </dd>
+
+
+        <dt class="col-md-4">
+          <label class="control-label">Horario Inicio:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ sessaoFormVM.audio === 0 ? 'Original' : 'Dublado' }}
+        </dd>
+
+        <dt class="col-md-4">
+          <label class="control-label">Filme:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ sessaoFormVM.filme.titulo}}
+        </dd>
+
+
+        <dt class="col-md-4">
+          <label class="control-label">Sala:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ sessaoFormVM.sala.nome}}
+        </dd>
+
+      </dl>
+
+      <div class="card-footer g-grid d-flex gap-1 mt-5">
+        <button (click)="gravar()" type="button" class="btn btn-primary px-5">
+          <i class="bi bi-trash-fill me-2"></i>
+          Excluir
+        </button>
+        <button routerLink="/sessoes/listar" type="button" class="btn btn-outline-primary px-5">
+          <i class="bi bi-arrow-return-left me-2"></i>
+          Voltar
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

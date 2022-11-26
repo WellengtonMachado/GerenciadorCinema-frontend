@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <!-- Conteúdo principal -->
+    <div class="col-12 col-md-10 col-lg-9 mx-auto my-5">
+      <!-- Titulo -->
+      <div class="text-md-start">
+
+        <div class="text-md-start">
+          <h1 class="fw-bold text-primary">
+            Excluir Filme
+          </h1>
+          <hr />
+        </div>
+
+        <h2 class="fs-5">
+          Tem certeza que deseja excluir o Filme <span class="fw-bolder fst-italic">"{{ filmeFormVM.titulo }}"
+          </span>?
+        </h2>
+      </div>
+
+      <dl class="form-group mt-4 row">
+
+        <dt class="col-md-4">
+          <label class="control-label">Imagem:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ filmeFormVM.Imagem}}
+        </dd>
+
+        <dt class="col-md-4">
+          <label class="control-label">Titulo:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ filmeFormVM.titulo}}
+        </dd>
+
+        <dt class="col-md-4">
+          <label class="control-label">Descrição:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ filmeFormVM.descricao}}
+        </dd>
+
+        <dt class="col-md-4">
+          <label class="control-label">Duração:</label>
+        </dt>
+        <dd class="col-md-8">
+          {{ filmeFormVM.duracao}}
+        </dd>
+
+
+
+
+      </dl>
+
+
+      <div class="card-footer g-grid d-flex gap-1 mt-5">
+        <button (click)="gravar()" type="button" class="btn btn-primary px-5">
+          <i class="bi bi-trash-fill me-2"></i>
+          Excluir
+        </button>
+        <button routerLink="/filmes/listar" type="button" class="btn btn-outline-primary px-5">
+          <i class="bi bi-arrow-return-left me-2"></i>
+          Voltar
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
