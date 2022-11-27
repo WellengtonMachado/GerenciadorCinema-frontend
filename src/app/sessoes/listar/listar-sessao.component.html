@@ -6,7 +6,7 @@
 
       <!-- Titulo -->
       <div class="text-md-start">
-        <h1 class="fw-bold text-primary">
+        <h1 class="fw-bold text-dark">
           Listar Sessão
         </h1>
         <hr />
@@ -14,7 +14,7 @@
 
       <!-- Barra de Ações -->
       <div class="d-grid d-md-flex gap-1 mt-5">
-        <a [routerLink]="['/sessoes/inserir']" role="button" class="btn btn-primary me-md-1">
+        <a [routerLink]="['/sessoes/inserir']" role="button" class="btn btn-dark me-md-1">
           <i class="pi pi-plus-circle me-2"></i>
           Nova Sessão
         </a>
@@ -49,7 +49,7 @@
               <td class="d-grid d-md-block">
 
                 <button [routerLink]="['/sessoes/editar', s.id]" type="button"
-                  class="btn btn-sm btn-primary me-0 me-md-1 mb-1 mb-md-auto">
+                  class="btn btn-sm btn-dark me-0 me-md-1 mb-1 mb-md-auto">
                   <i class="bi bi-pencil"></i>
                 </button>
                 <button [routerLink]="['/sessoes/excluir', s.id]" type="button"

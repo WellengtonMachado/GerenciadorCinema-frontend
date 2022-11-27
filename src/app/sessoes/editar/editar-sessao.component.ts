@@ -64,8 +64,9 @@ export class EditarSessaoComponent implements OnInit {
 
     this.formSessao.patchValue({
       id: this.sessaoFormVM.id,
-      data: this.sessaoFormVM.data,
+      data: this.sessaoFormVM.data.toString().split("T")[0],
       horarioInicio: this.sessaoFormVM.horarioInicio,
+      horarioFim: this.sessaoFormVM.horarioFim,
       valorIngresso: this.sessaoFormVM.valorIngresso,
       animacao: this.sessaoFormVM.animacao,
       audio: this.sessaoFormVM.audio,
@@ -84,6 +85,9 @@ export class EditarSessaoComponent implements OnInit {
     return this.formSessao.get('horarioInicio');
   }
 
+  get horarioFim() {
+    return this.formSessao.get('horarioFim');
+  }
 
   get valorIngresso() {
     return this.formSessao.get('valorIngresso');

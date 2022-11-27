@@ -4,7 +4,7 @@
     <div class="col-12 col-md-10 col-lg-6 mx-auto mt-5">
       <!-- Titulo -->
       <div class="text-md-start">
-        <h1 class="fw-bold text-primary">
+        <h1 class="fw-bold text-dark">
           Inserir Nova Sessão
         </h1>
         <hr />
@@ -32,13 +32,13 @@
           </div>
         </div>
 
-        
+
 
         <div class="form-group mb-3 position-relative">
           <label class="form-label">Valor:</label>
           <input [ngClass]="valorIngresso?.touched && valorIngresso?.invalid ? 'is-invalid' : ''" currencyMask
             [options]="{  prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }" formControlName="valorIngresso"
-            class="form-control" type="text" placeholder="Digite o valor do ingresso" />
+            class="form-control text-bg-dark" type="text" placeholder="Digite o valor do ingresso" />
           <div class="invalid-tooltip" *ngIf="valorIngresso?.touched && valorIngresso?.invalid">
             <span *ngIf="valorIngresso?.errors?.['required']">O valor precisa ser preenchido.</span>
           </div>
@@ -47,8 +47,8 @@
 
         <div class="form-group mb-3 position-relative">
           <label class="form-label">Tipo de Animação</label>
-          <ng-select class="custom" [ngClass]="animacao?.touched && animacao?.invalid ? 'is-invalid' : ''"
-            formControlName="animacao" [clearable]="false" [searchable]="false">
+          <ng-select class="form-control text-bg-dark" [ngClass]="animacao?.touched && animacao?.invalid ? 'is-invalid' : ''"
+          formControlName="animacao" [clearable]="false" [searchable]="false">
             <ng-option *ngFor="let tipo of tipoAnimacao ; index as i" [value]="i">
               {{ tipo }}
             </ng-option>
@@ -62,7 +62,7 @@
 
         <div class="form-group mb-3 position-relative">
           <label class="form-label">Tipo de Audio</label>
-          <ng-select class="custom" [ngClass]="audio?.touched && audio?.invalid ? 'is-invalid' : ''"
+          <ng-select class="form-control text-bg-dark" [ngClass]="audio?.touched && audio?.invalid ? 'is-invalid' : ''"
             formControlName="audio" [clearable]="false" [searchable]="false">
             <ng-option *ngFor="let tipo of tipoAudio ; index as i" [value]="i">
               {{ tipo }}
@@ -76,7 +76,7 @@
 
         <div class="form-group mb-3 position-relative">
           <label class="form-label">Filme</label>
-          <ng-select class="custom" [ngClass]="filmeId?.touched && filmeId?.invalid ? 'is-invalid' : ''"
+          <ng-select class="form-control text-bg-dark" [ngClass]="filmeId?.touched && filmeId?.invalid ? 'is-invalid' : ''"
             formControlName="filmeId" [clearable]="false" [searchable]="false">
             <ng-option *ngFor="let filme of (filmes | async) ;" [value]="filme.id">
               <!-- Observables | async -->
@@ -91,7 +91,7 @@
 
         <div class="form-group mb-3 position-relative">
           <label class="form-label">Sala</label>
-          <ng-select class="custom" [ngClass]="salaId?.touched && salaId?.invalid ? 'is-invalid' : ''"
+          <ng-select class="form-control text-bg-dark" [ngClass]="salaId?.touched && salaId?.invalid ? 'is-invalid' : ''"
             formControlName="salaId" [clearable]="false" [searchable]="false">
             <ng-option *ngFor="let sala of (salas | async) ;" [value]="sala.id">
               <!-- Observables | async -->
@@ -106,11 +106,11 @@
 
 
         <div class="card-footer g-grid d-flex gap-1 mt-5">
-          <button (click)="gravar()" type="button" class="btn btn-primary px-5">
+          <button (click)="gravar()" type="button" class="btn btn-dark px-5">
             <i class="pi pi-save me-2"></i>
             Gravar
           </button>
-          <button routerLink="/sessoes/listar" type="button" class="btn btn-outline-primary px-5">
+          <button routerLink="/sessoes/listar" type="button" class="btn btn-outline-dark px-5">
             <i class="pi pi-arrow-left me-2"></i>
             Voltar
           </button>

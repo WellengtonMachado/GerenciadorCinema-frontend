@@ -6,7 +6,7 @@
 
       <!-- Titulo -->
       <div class="text-md-start">
-        <h1 class="fw-bold text-primary">
+        <h1 class="fw-bold text-dark">
           Listar Filmes
         </h1>
         <hr />
@@ -14,7 +14,7 @@
 
       <!-- Barra de Ações -->
       <div class="d-grid d-md-flex gap-1 mt-5">
-        <a [routerLink]="['/filmes/inserir']" role="button" class="btn btn-primary me-md-1">
+        <a [routerLink]="['/filmes/inserir']" role="button" class="btn btn-dark me-md-1">
           <i class="pi pi-plus-circle me-2"></i>
           Novo Filme
         </a>
@@ -40,8 +40,8 @@
               <td>{{f.duracao }}</td>
 
               <td class="d-grid d-md-block">
-                <button [routerLink]="['/filmes/editar', f.id]"
-                  type="button" class="btn btn-sm btn-primary me-0 me-md-1 mb-1 mb-md-auto">
+                <button [routerLink]="['/filmes/editar', f.id]" type="button"
+                  class="btn btn-sm btn-dark me-0 me-md-1 mb-1 mb-md-auto">
                   <i class="bi bi-pencil"></i>
                 </button>
 

@@ -1,23 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand fw-semibold" routerLink="/">Gerenciador de Cinema<i
-        class="bi bi-clipboard2-check-fill text-primary ms-2"></i></a>
+        class="bi bi-camera-video text-danger ms-2"></i></a>
     <button (click)="estaColapsada = !estaColapsada" class="navbar-toggler" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" [ngbCollapse]="!estaColapsada">
       <div class="links w-100 text-center" *ngIf="(usuarioLogado$ | async) as usuarioLogado">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
           <li class="nav-item">
-            <a class="nav-link text-primary" routerLinkActive="fw-semibold" routerLink="/filmes">Filmes</a>
+            <a class="btn btn-dark m-1" routerLink="/filmes"><i class="bi bi-film me-2"></i>Filmes</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-primary" routerLinkActive="fw-semibold" routerLink="/salas">Salas</a>
+            <a class="btn btn-dark m-1" routerLink="/salas"><i class="bi bi-person-workspace me-2"></i>Salas</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-primary" routerLinkActive="fw-semibold" routerLink="/sessoes">Sessões</a>
+            <a class="btn btn-dark m-1" routerLink="/sessoes"><i class="bi bi-calendar-check-fill me-2"></i>Sessões</a>
           </li>
 
 
@@ -27,7 +28,7 @@
                 class="bi bi-person-badge me-1"></i>{{ usuarioLogado.nome }}</a>
           </li>
           <li class="nav-item ms-2">
-            <a role="button" (click)="sair()" class="btn btn-primary px-5"><i
+            <a role="button" (click)="sair()" class="btn btn-dark px-5"><i
                 class="bi bi-door-open-fill me-2"></i>Sair</a>
           </li>
         </ul>
